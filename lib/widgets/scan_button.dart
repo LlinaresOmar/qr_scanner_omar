@@ -47,9 +47,9 @@ class QRScannerScreen extends StatelessWidget {
       body: MobileScanner(
         onDetect: (capture) {
           final barcode =
-              capture.barcodes.first; // Get the first detected barcode
+              capture.barcodes.first; 
           final String? url =
-              barcode.rawValue; // Access the value with rawValue
+              barcode.rawValue;
           print('Código escaneado: $url');
           if (url != null && Uri.tryParse(url)?.hasScheme == true) {
             _launchUrl(context, url);
